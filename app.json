@@ -1,0 +1,12 @@
+{
+  "name": "screening",
+  "displayName": "screening",
+  "expo": {
+    "name": "screening",
+    "slug": "screening",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
