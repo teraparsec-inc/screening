@@ -1,25 +1,32 @@
-import React, {useState} from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
-
-var windowHeight = Dimensions.get('window').height
-
+import { DraxView } from 'react-native-drax';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 
 export default function DragObject(props) {
-
-    return(
-        //Boilerplate style: Implement your draggable component here!
-        <View style={[styles.bubble]}>
-            
-        </View>
-    );
+  return (
+      //Boilerplate style: Implement your draggable component here!
+      <DraxView
+        style={{...styles.bubble, 
+          bottom: props.intialLocation.bottom, 
+          left: props.intialLocation.left,
+          width: 2*props.objectRadius,
+          height: 2*props.objectRadius,
+        }}
+        onDragEnd={() => {
+          if (props.isMovedOutOfDroppedZone) {
+            props.setIsInDroppedZone(false);
+            props.updateDropColor('blue')
+          }
+        }}
+      />
+  );
 }
 
 const styles = StyleSheet.create({
-    bubble:{
-        position:"absolute",
-        width:70,
-        height:70,
-        borderRadius:35,
-        backgroundColor:"green",
-    }
+  bubble:{
+    position:"absolute",
+    zIndex: 100,
+    borderRadius:120,
+    backgroundColor:"green",
+  }
 })
