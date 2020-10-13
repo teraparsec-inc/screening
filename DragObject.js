@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native';
 export default function DragObject(props) {
   return (
       //Boilerplate style: Implement your draggable component here!
+
       <DraxView
         style={{...styles.bubble, 
           bottom: props.intialLocation.bottom, 
