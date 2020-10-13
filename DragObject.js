@@ -1,3 +1,4 @@
+  
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
@@ -16,7 +17,7 @@ export default function DragObject(props) {
 
 const styles = StyleSheet.create({
     bubble:{
-        position:"absolute",
+        // position:"absolute",
         width:70,
         height:70,
         borderRadius:35,
