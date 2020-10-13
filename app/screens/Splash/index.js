@@ -18,7 +18,6 @@ export default function Splash() {
         <Text>Drag Here To Magnetizess!</Text>
         <View style={[styles.lockDrop,{borderColor:dropColor}]} />
       </View>
-
     </View>
   );
 }
